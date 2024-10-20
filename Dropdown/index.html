@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dropdown</title>
+  </head>
+  <body>
+    <button id="btn" class="dropdown">
+      <div class="dropdown-btn">
+        <span>Dropdown</span>
+        <svg
+          width="800px"
+          height="800px"
+          viewBox="0 0 1024 1024"
+          class="caret"
+          id="caret"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+            fill="#ffffff"
+          />
+        </svg>
+      </div> 
+      <div class="dropdown-content" id="dropdown-content">
+        <a href="#">Content 1</a>
+        <a href="#">Content 2</a>
+        <a href="#">Content 3</a>
+        <a href="#">Content 4</a>
+        <a href="#">Content 5</a>
+      </div>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
