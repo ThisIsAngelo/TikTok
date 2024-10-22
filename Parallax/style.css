@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bellefair", serif;
+  color: #fff;
+}
+
+.container {
+  padding: 1rem 2rem;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 6rem;
+  z-index: 9999;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  width: 75px;
+  height: 75px;
+}
+
+header .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s linear;
+}
+
+header nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s linear;
+}
+
+header nav button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+header nav button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.3s linear;
+  z-index: 0;
+}
+
+header nav button:hover::after {
+  height: 100%;
+  top: initial;
+  bottom: 0;
+  transition: 0.3s linear;
+}
+
+header nav button span {
+  position: relative;
+  transition: color 0.3s linear;
+  z-index: 1;
+}
+
+header nav button:hover span {
+  color: #000;
+}
+
+header .hamburger-menu {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero .container .content .left-side,
+.hero .container .content .right-side {
+  width: 30%;
+}
+
+.hero .container .content .left-side {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  padding-left: 2rem;
+}
+
+.hero .container .content .right-side {
+  position: absolute;
+  right: 0rem;
+  top: 45%;
+  padding-right: 2rem;
+}
+
+
+.hero .container .content .left-side h1,
+.hero .container .content .right-side h1 {
+  font-size: 65px;
+  background: hsla(150, 68%, 82%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(150, 68%, 82%, 1) 0%,
+    hsla(245, 59%, 73%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(150, 68%, 82%, 1) 0%,
+    hsla(245, 59%, 73%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(150, 68%, 82%, 1) 0%,
+    hsla(245, 59%, 73%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+.hero .container .content .left-side p,
+.hero .container .content .right-side p {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.hero .container .content img {
+  width: 50%;
+  margin-top: 4rem;
+}
+
+.second {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
