@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Type Effect</title>
+  </head>
+  <body>
+    <h1>I'm a <span class="type"></span></h1>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".type", {
+        strings: ["Programmer.", "Web Developer.", "Front-End Developer."],
+        typeSpeed: 80,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
