@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+}
+
+section {
+  min-height: 100vh;
+  background: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+section .logo {
+  font-weight: bold;
+  font-family: "Shojumaru", system-ui;
+  font-size: 4rem;
+  animation: animate 5s linear infinite;
+}
+
+section .wrapper {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+section .wrapper:hover {
+  border: 5px solid #f612fe;
+  box-shadow: 0 0 7px #f612fe, inset 0 0 7px #f612fe;
+}
+
+section .wrapper h1 {
+  text-align: center;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+section .wrapper:hover h1 {
+  text-shadow: 0 0 1px #f612fe, 0 0 3px #f612fe, 0 0 6px #f612fe,
+    0 0 9px #f612fe, 0 0 15px #f612fe;
+}
+
+section .wrapper .formbox {
+  width: 100%;
+  padding: 40px;
+}
+
+section .wrapper .formbox.login {
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+section .wrapper.active .formbox.login {
+  transform: translateX(-400px);
+  transition: transform 0.3s linear;
+}
+
+section .wrapper .formbox.login .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .wrapper .formbox.login .remember-forgot label,
+section .wrapper .formbox.register .remember-forgot label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+section .wrapper .formbox.login button,
+section .wrapper .formbox.register button {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #333;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 1rem 0;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+
+section .wrapper .formbox.login button:hover,
+section .wrapper .formbox.register button:hover {
+  background: #f612fe;
+  color: #fff;
+  box-shadow: 0 0 15px #f612fe;
+  transition: 0.2s linear;
+}
+
+section .wrapper .formbox.login .login-register .register-link,
+section .wrapper .formbox.register .login-register .login-link {
+  color: #fff;
+  margin-left: 8px;
+}
+
+section .wrapper .formbox.login .remember-forgot a,
+section .wrapper .formbox.register .remember-forgot a {
+  color: #fff;
+}
+
+section .wrapper .formbox.register {
+  position: absolute;
+  transform: translateX(400px);
+  transition: transform 0.3s linear;
+}
+
+section .wrapper.active .formbox.register {
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 0 8px;
+  margin: 30px 0;
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+
+.input:has(input:focus),
+.input:has(input:valid) {
+  box-shadow: 0 0 7px #f612fe, inset 0 0 7px #f612fe;
+}
+
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  background-color: #000;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: -3px;
+  padding: 0 3px;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+.input .icon {
+  position: absolute;
+  right: 8px;
+  top: 30%;
+  font-size: 1.2rem;
+}
+
+.input .icon .eyes {
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: white;
+    text-shadow: 0 0 2px #f612fe, 0 0 5px #f612fe, 0 0 10px #f612fe,
+      0 0 20px #f612fe, 0 0 40px #f612fe;
+  }
+}
