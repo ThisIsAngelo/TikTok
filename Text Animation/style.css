@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+svg{
+    display: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: raleway;
+}
+
+svg text {
+    text-transform: uppercase;
+    font-size: 5rem;
+    animation: stroke 5s infinite alternate;
+}
+
+@keyframes stroke {
+    0% {
+        stroke: white;
+        stroke-width: 0;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+    }
+    70% {
+        stroke: white;
+    }
+    80% {
+        stroke: white;
+        stroke-width: 3;
+    }
+    100% {
+        stroke: white;
+        stroke-width: 0;
+        stroke-dashoffset: -25%;
+        stroke-dasharray:50% 0;
+    }
+  }
