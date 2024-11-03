@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content h1 {
+  font-family: "Press Start 2p", system-ui;
+  font-size: 7rem;
+  animation: animate 5s linear infinite;
+}
+
+.content h2 {
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+}
+
+.content p {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  width: 50%;
+}
+
+.content .action {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+}
+
+.content .action button {
+  cursor: pointer;
+  width: 50%;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  border: 3px solid #333;
+  border-radius: 8px;
+  transition: 0.3s linear;
+}
+
+.content .action button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s linear;
+}
+
+.content .action button:nth-child(2) {
+  background-color: #fff;
+  color: #000;
+}
+
+.content img {
+  position: absolute;
+  bottom: 3.2rem;
+  left: 35%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #202020;
+    text-shadow: none;
+  }
+
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: white;
+    text-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+      0 0 20px #ffffff, 0 0 40px #ffffff;
+  }
+}
