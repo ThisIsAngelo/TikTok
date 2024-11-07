@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Signup Page</title>
+  </head>
+  <body>
+    <div class="wrapper ">
+      <div class="form">
+        <header>
+          <div class="logo">
+            <img src="assets/saturn.png" alt="logo" />
+            <h1>Novaspace</h1>
+          </div>
+
+          <select name="language">
+            <option value="english">English</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="philippines">Philippines</option>
+          </select>
+        </header>
+
+        <div class="form-area">
+          <div class="form-box">
+            <div class="title">
+              <h1>Welcome, Human On Earth!</h1>
+              <p>Log In to join Earth team with Novaspace🚀</p>
+            </div>
+
+            <div class="google-apple">
+              <button>
+                <ion-icon name="logo-google"></ion-icon>
+                <span>Log in with Google</span>
+              </button>
+              <button>
+                <ion-icon name="logo-github"></ion-icon>
+                <span>Log in with Github</span>
+              </button>
+            </div>
+
+            <div class="or">
+              <hr />
+              <p>OR</p>
+              <hr />
+            </div>
+
+            <form>
+              <div class="input">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Email Here..." />
+              </div>
+
+              <div class="input">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password Here..."
+                />
+                <ion-icon onclick={showPassword(event)} class="eye" name="eye-outline"></ion-icon>
+              </div>
+
+              <div class="row">
+                <div class="remember">
+                  <input type="checkbox" />
+                  <p>Remember Me</p>
+                </div>
+
+                <a href="#">Forgot Password?</a>
+              </div>
+
+              <button class="login">Log In</button>
+            </form>
+
+            <p class="regis">
+              Don't have an account? <a href="#" id="regis">Sign Up</a>
+            </p>
+          </div>
+
+          <div class="form-box">
+            <div class="title">
+              <h1>Welcome, Human On Earth!</h1>
+              <p>Sign Up to join Earth team with Novaspace🚀</p>
+            </div>
+
+            <div class="google-apple">
+              <button>
+                <ion-icon name="logo-google"></ion-icon>
+                <span>Sign Up with Google</span>
+              </button>
+              <button>
+                <ion-icon name="logo-github"></ion-icon>
+                <span>Sign Up with Github</span>
+              </button>
+            </div>
+
+            <div class="or">
+              <hr />
+              <p>OR</p>
+              <hr />
+            </div>
+
+            <form>
+              <div class="input">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Email Here..." />
+              </div>
+
+              <div class="input">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  id="password-regis"
+                  placeholder="Password Here..."
+                />
+                <ion-icon onclick={showPassword(event)} class="eye" name="eye-outline"></ion-icon>
+              </div>
+
+              <div class="row">
+                <div class="remember">
+                  <input type="checkbox" />
+                  <p>Remember Me</p>
+                </div>
+              </div>
+
+              <button class="signup">Sign Up</button>
+            </form>
+
+            <p class="login">
+              Already have account? <a href="#" id="login">Log In</a>
+            </p>
+          </div>
+
+         
+        </div>
+      </div>
+
+      <div class="image-side">
+        <div class="signup">
+            <h1>650K+ users. 100+ Novaship Launches</h1>
+            <div class="image">
+                <img src="assets/signup.jpeg" alt="signup">
+                <hr>
+            </div>
+        </div>
+
+        <div class="login">
+            <h1>650K+ users. 100+ Novaship Launches</h1>
+            <div class="image">
+                <img src="assets/login.jpeg" alt="signup">
+                <hr>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ion Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
